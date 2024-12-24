@@ -59,11 +59,9 @@ This project demonstrates:
 
    resource "aws_s3_bucket" "my_bucket" {
      bucket = "my-custom-bucket-sarps-07" # Replace placeholders with your name and a random number
-      ##![screenshot of creation of s3 bucket](images/bucket_creation.png)
 
      tags = {
        Environment = "Create an S3 Bucket with Terraform"
-      ##![screenshot of Tag](images/Tag_Environment.png)
      }
    }
 
@@ -80,7 +78,6 @@ This project demonstrates:
      bucket = aws_s3_bucket.my_bucket.id  # Reference the bucket ID
      key    = "ccfraud.png"              # Path in the bucket
      source = "ccfraud.png"              # Local file path
-      ##![screenshot of object](images/object.png)
    }
    ```
 
@@ -117,6 +114,21 @@ This project demonstrates:
      ```bash
      aws s3 ls
      ```
+
+## Project Features
+
+### 1. Creating an S3 Bucket
+Below is a screenshot of the S3 bucket creation process:
+![Screenshot of S3 Bucket Creation](images/bucket_creation.png)
+
+### 2. Adding Tags
+This is an example of how the tags are applied to the bucket:
+![Screenshot of Tag Environment](images/Tag_Environment.png)
+
+### 3. Adding an Object to the S3 Bucket
+Here is a screenshot of an object being uploaded to the S3 bucket:
+![Screenshot of Object Upload](images/object.png)
+
 
 ## Going Further
 
