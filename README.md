@@ -59,9 +59,11 @@ This project demonstrates:
 
    resource "aws_s3_bucket" "my_bucket" {
      bucket = "my-custom-bucket-sarps-07" # Replace placeholders with your name and a random number
+      ##![screenshot of creation of s3 bucket](images/bucket_creation.png)
 
      tags = {
        Environment = "Create an S3 Bucket with Terraform"
+      ##![screenshot of Tag](images/Tag_Environment.png)
      }
    }
 
@@ -78,6 +80,7 @@ This project demonstrates:
      bucket = aws_s3_bucket.my_bucket.id  # Reference the bucket ID
      key    = "ccfraud.png"              # Path in the bucket
      source = "ccfraud.png"              # Local file path
+      ##![screenshot of object](images/object.png)
    }
    ```
 
